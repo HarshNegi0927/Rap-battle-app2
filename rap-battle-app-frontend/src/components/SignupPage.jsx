@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { FaGoogle, FaFacebook, FaGithub, FaUser, FaLock, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaGoogle, FaLinkedin, FaGithub, FaUser, FaLock, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const SignupPage = () => {
     const [email, setEmail] = useState('');
@@ -103,9 +103,15 @@ const SignupPage = () => {
                     <div className="text-center mt-8">
                         <p className="text-gray-400 mb-4">Or sign up with</p>
                         <div className="flex items-center justify-center space-x-6">
-                            <FaGoogle className="text-3xl text-cyan-400 cursor-pointer transition-all duration-300 hover:scale-110" />
-                            <FaFacebook className="text-3xl text-pink-400 cursor-pointer transition-all duration-300 hover:scale-110" />
-                            <FaGithub className="text-3xl text-purple-400 cursor-pointer transition-all duration-300 hover:scale-110" />
+                            <a href="http://localhost:5000/api/auth/google">
+                                <FaGoogle className="text-3xl text-cyan-400 cursor-pointer transition-all duration-300 hover:scale-110" />
+                            </a>
+                            <a href="http://localhost:5000/api/auth/linkedin">
+                                <FaLinkedin className="text-3xl text-blue-600 cursor-pointer transition-all duration-300 hover:scale-110" />
+                            </a>
+                            <a href="http://localhost:5000/api/auth/github">
+                                <FaGithub className="text-3xl text-purple-400 cursor-pointer transition-all duration-300 hover:scale-110" />
+                            </a>
                         </div>
                     </div>
                 </form>
