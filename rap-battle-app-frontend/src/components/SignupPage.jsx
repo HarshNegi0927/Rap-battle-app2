@@ -35,6 +35,10 @@ const SignupPage = () => {
         setPassword('');
     };
 
+    const handleRedirectToLogin = () => {
+        navigate('/login'); // Redirect to the login page
+    };
+
     return (
         <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 to-black">
             <div className="w-full max-w-md p-8 rounded-lg border border-gray-700 shadow-2xl bg-gray-800 text-white">
@@ -105,6 +109,18 @@ const SignupPage = () => {
                         </div>
                     </div>
                 </form>
+
+                <div className="mt-6 text-center">
+                    <p className="text-gray-400">
+                        Already have an account?{' '}
+                        <button
+                            onClick={handleRedirectToLogin}
+                            className="text-cyan-400 hover:underline"
+                        >
+                            Login
+                        </button>
+                    </p>
+                </div>
             </div>
         </div>
     );
